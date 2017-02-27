@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  
+
   s.name         = "CoordinatorType"
   s.version      = "0.0.1"
   s.summary      = "CoordinatorType protocol for making implementing the Coordinator pattern painless."
@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
 
   s.source       = { :git => "https://github.com/rchatham/CoordinatorType.git", :tag => "#{s.version}" }
 
-  spec.ios.source_files   = 'CoordinatorType-iOS/*.swift'
-  spec.osx.source_files   = 'CoordinatorType-macOS/*.swift'
+  s.ios.source_files   = 'CoordinatorType-iOS/*.swift'
+  s.osx.source_files   = 'CoordinatorType-macOS/*.swift'
 
 end
