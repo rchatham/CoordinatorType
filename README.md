@@ -6,6 +6,7 @@ Based on the coordinator patterns described below:
 
 - [http://khanlou.com/2015/01/the-coordinator/](http://khanlou.com/2015/01/the-coordinator/)
 - [http://khanlou.com/2015/10/coordinators-redux/](http://khanlou.com/2015/10/coordinators-redux/)
+- [http://macoscope.com/blog/storyboards-and-their-better-alternatives/#more](http://macoscope.com/blog/storyboards-and-their-better-alternatives/#more)
 
 
 Other takes on coordinator patterns not neccesarily inspiring this project:
