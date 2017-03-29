@@ -8,6 +8,7 @@
 
 import Cocoa
 
+
 public protocol TabCoordinatorType: CoordinatorType {
     weak var tabController: NSTabViewController? { get set }
     func rootViewControllers() -> [NSViewController]

@@ -12,6 +12,7 @@
 		307B526F1E63BA6800D3FDD0 /* TabCoordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307B526E1E63BA6800D3FDD0 /* TabCoordinatorType.swift */; };
 		307B52711E63BB5300D3FDD0 /* NavigationCoordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307B52701E63BB5300D3FDD0 /* NavigationCoordinatorType.swift */; };
 		307B52731E63BB9300D3FDD0 /* TabCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307B52721E63BB9300D3FDD0 /* TabCoordinator.swift */; };
+		30B39A2B1E8C67C8001DF187 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B39A2A1E8C67C8001DF187 /* AppCoordinator.swift */; };
 		30EE48081E6278A4006992A2 /* CoordinatorType.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30EE47FE1E6278A4006992A2 /* CoordinatorType.framework */; };
 		30EE480D1E6278A5006992A2 /* CoordinatorType_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EE480C1E6278A5006992A2 /* CoordinatorType_iOSTests.swift */; };
 		30EE480F1E6278A5006992A2 /* CoordinatorType-iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 30EE48011E6278A4006992A2 /* CoordinatorType-iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -43,6 +44,7 @@
 		307B526E1E63BA6800D3FDD0 /* TabCoordinatorType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabCoordinatorType.swift; sourceTree = "<group>"; };
 		307B52701E63BB5300D3FDD0 /* NavigationCoordinatorType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationCoordinatorType.swift; sourceTree = "<group>"; };
 		307B52721E63BB9300D3FDD0 /* TabCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabCoordinator.swift; sourceTree = "<group>"; };
+		30B39A2A1E8C67C8001DF187 /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		30EE47FE1E6278A4006992A2 /* CoordinatorType.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoordinatorType.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		30EE48011E6278A4006992A2 /* CoordinatorType-iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CoordinatorType-iOS.h"; sourceTree = "<group>"; };
 		30EE48021E6278A4006992A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				307B526A1E63B8C900D3FDD0 /* CoordinatorType.swift */,
+				30B39A2A1E8C67C8001DF187 /* AppCoordinator.swift */,
 				307B52701E63BB5300D3FDD0 /* NavigationCoordinatorType.swift */,
 				307B52721E63BB9300D3FDD0 /* TabCoordinator.swift */,
 				30EE48011E6278A4006992A2 /* CoordinatorType-iOS.h */,
@@ -333,6 +336,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30B39A2B1E8C67C8001DF187 /* AppCoordinator.swift in Sources */,
 				307B52711E63BB5300D3FDD0 /* NavigationCoordinatorType.swift in Sources */,
 				307B52731E63BB9300D3FDD0 /* TabCoordinator.swift in Sources */,
 				307B526B1E63B8C900D3FDD0 /* CoordinatorType.swift in Sources */,
