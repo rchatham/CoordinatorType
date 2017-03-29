@@ -7,6 +7,7 @@ Protocol definition of the Coordinator pattern with a few extras to make impleme
 - Know how to generate base view controller
 - Handle navigation for presented view controllers - via delegation
 
+---
 
 Based on the coordinator patterns described below:
 
