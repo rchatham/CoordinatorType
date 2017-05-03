@@ -6,8 +6,8 @@
 //
 //
 
-import Foundation
+import UIKit
 
-protocol URLCoordinatorType: CoordinatorType {
+public protocol URLCoordinatorType: CoordinatorType {
     func start(onViewController viewController: UIViewController, withURL url: URL, animated: Bool)
 }

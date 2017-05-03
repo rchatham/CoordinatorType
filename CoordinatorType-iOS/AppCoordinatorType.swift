@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol AppCoordinatorType: CoordinatorType {}
+public protocol AppCoordinatorType: CoordinatorType {}
 
 extension AppCoordinatorType where Self: UIApplicationDelegate {
     
