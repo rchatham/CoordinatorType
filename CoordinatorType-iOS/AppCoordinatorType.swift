@@ -12,12 +12,12 @@ public protocol AppCoordinatorType: CoordinatorType {}
 
 extension AppCoordinatorType where Self: UIApplicationDelegate {
     
-    weak internal var delegate: CoordinatorTypeDelegate? {
+    weak public var delegate: CoordinatorTypeDelegate? {
         get { return nil }
         set {}
     }
     
-    internal var childCoordinators: [CoordinatorType] {
+    public var childCoordinators: [CoordinatorType] {
         get {
             return Static.childCoordinators
         }
