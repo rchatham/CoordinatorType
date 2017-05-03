@@ -22,8 +22,6 @@ extension CoordinatorType {
     }
 }
 
-
-
 public protocol CoordinatorTypeDelegate: class {
     func coordinatorDidFinish(_ coordinator: CoordinatorType)
 }
