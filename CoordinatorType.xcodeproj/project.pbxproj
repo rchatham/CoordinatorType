@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		307963491EB9B521004CF803 /* URLCoordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307963481EB9B521004CF803 /* URLCoordinatorType.swift */; };
 		307B526B1E63B8C900D3FDD0 /* CoordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307B526A1E63B8C900D3FDD0 /* CoordinatorType.swift */; };
 		307B526D1E63B8DD00D3FDD0 /* CoordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307B526C1E63B8DD00D3FDD0 /* CoordinatorType.swift */; };
 		307B526F1E63BA6800D3FDD0 /* TabCoordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307B526E1E63BA6800D3FDD0 /* TabCoordinatorType.swift */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		307963481EB9B521004CF803 /* URLCoordinatorType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLCoordinatorType.swift; sourceTree = "<group>"; };
 		307B526A1E63B8C900D3FDD0 /* CoordinatorType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoordinatorType.swift; sourceTree = "<group>"; };
 		307B526C1E63B8DD00D3FDD0 /* CoordinatorType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoordinatorType.swift; sourceTree = "<group>"; };
 		307B526E1E63BA6800D3FDD0 /* TabCoordinatorType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabCoordinatorType.swift; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 				30B39A2A1E8C67C8001DF187 /* AppCoordinatorType.swift */,
 				307B52701E63BB5300D3FDD0 /* NavigationCoordinatorType.swift */,
 				307B52721E63BB9300D3FDD0 /* TabCoordinatorType.swift */,
+				307963481EB9B521004CF803 /* URLCoordinatorType.swift */,
 				30EE48011E6278A4006992A2 /* CoordinatorType-iOS.h */,
 				30EE48021E6278A4006992A2 /* Info.plist */,
 			);
@@ -339,6 +342,7 @@
 				30B39A2B1E8C67C8001DF187 /* AppCoordinatorType.swift in Sources */,
 				307B52711E63BB5300D3FDD0 /* NavigationCoordinatorType.swift in Sources */,
 				307B52731E63BB9300D3FDD0 /* TabCoordinatorType.swift in Sources */,
+				307963491EB9B521004CF803 /* URLCoordinatorType.swift in Sources */,
 				307B526B1E63B8C900D3FDD0 /* CoordinatorType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
