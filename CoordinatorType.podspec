@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "CoordinatorType"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "CoordinatorType protocol for making implementing the Coordinator pattern painless."
   s.description  = <<-DESC
   CoordinatorType protocol with basic Coordinator requirements implemented and default functionality implemented via protocol extensions.
