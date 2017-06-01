@@ -14,6 +14,7 @@
 		307B52711E63BB5300D3FDD0 /* NavigationCoordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307B52701E63BB5300D3FDD0 /* NavigationCoordinatorType.swift */; };
 		307B52731E63BB9300D3FDD0 /* TabCoordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307B52721E63BB9300D3FDD0 /* TabCoordinatorType.swift */; };
 		30B39A2B1E8C67C8001DF187 /* AppCoordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B39A2A1E8C67C8001DF187 /* AppCoordinatorType.swift */; };
+		30C196801EDFD7DA005678C8 /* MockNavigationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C1967F1EDFD7DA005678C8 /* MockNavigationCoordinator.swift */; };
 		30EE48081E6278A4006992A2 /* CoordinatorType.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30EE47FE1E6278A4006992A2 /* CoordinatorType.framework */; };
 		30EE480D1E6278A5006992A2 /* CoordinatorType_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EE480C1E6278A5006992A2 /* CoordinatorType_iOSTests.swift */; };
 		30EE480F1E6278A5006992A2 /* CoordinatorType-iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 30EE48011E6278A4006992A2 /* CoordinatorType-iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -47,6 +48,7 @@
 		307B52701E63BB5300D3FDD0 /* NavigationCoordinatorType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationCoordinatorType.swift; sourceTree = "<group>"; };
 		307B52721E63BB9300D3FDD0 /* TabCoordinatorType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabCoordinatorType.swift; sourceTree = "<group>"; };
 		30B39A2A1E8C67C8001DF187 /* AppCoordinatorType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinatorType.swift; sourceTree = "<group>"; };
+		30C1967F1EDFD7DA005678C8 /* MockNavigationCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockNavigationCoordinator.swift; sourceTree = "<group>"; };
 		30EE47FE1E6278A4006992A2 /* CoordinatorType.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoordinatorType.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		30EE48011E6278A4006992A2 /* CoordinatorType-iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CoordinatorType-iOS.h"; sourceTree = "<group>"; };
 		30EE48021E6278A4006992A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				30EE480C1E6278A5006992A2 /* CoordinatorType_iOSTests.swift */,
+				30C1967F1EDFD7DA005678C8 /* MockNavigationCoordinator.swift */,
 				30EE480E1E6278A5006992A2 /* Info.plist */,
 			);
 			path = "CoordinatorType-iOSTests";
@@ -270,6 +273,7 @@
 					};
 					30EE48061E6278A4006992A2 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = NT7FFBVKUP;
 						ProvisioningStyle = Automatic;
 					};
 					30EE481A1E6278BB006992A2 = {
@@ -351,6 +355,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30C196801EDFD7DA005678C8 /* MockNavigationCoordinator.swift in Sources */,
 				30EE480D1E6278A5006992A2 /* CoordinatorType_iOSTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -586,7 +591,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = NT7FFBVKUP;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -642,7 +647,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = NT7FFBVKUP;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;

@@ -1,15 +1,15 @@
 //
-//  CoordinatorType_iOSTests.swift
-//  CoordinatorType-iOSTests
+//  CoordinatorType_iOSExampleTests.swift
+//  CoordinatorType-iOSExampleTests
 //
-//  Created by Reid Chatham on 2/25/17.
-//
+//  Created by Reid Chatham on 5/31/17.
+//  Copyright © 2017 Reid Chatham. All rights reserved.
 //
 
 import XCTest
-@testable import CoordinatorType
+@testable import CoordinatorType_iOSExample
 
-class CoordinatorType_iOSTests: XCTestCase {
+class CoordinatorType_iOSExampleTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
