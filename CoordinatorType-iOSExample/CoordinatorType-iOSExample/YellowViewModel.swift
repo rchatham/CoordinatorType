@@ -7,8 +7,9 @@
 //
 
 import Foundation
+import Architecture
 
 class YellowViewModel: ViewModel {
-    var state: State<String> = .loading
+    var state: State<String>? = State.loaded("🍕")
     weak var delegate: NetworkingRouter?
 }

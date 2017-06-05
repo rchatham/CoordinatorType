@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Architecture
 
 private let reuseIdentifier = "Cell"
 
@@ -14,7 +15,7 @@ class YellowCollectionViewController: UICollectionViewController, ViewModelable 
     
     let viewModel: YellowViewModel
     
-    init(viewModel: YellowViewModel) {
+    required init(viewModel: YellowViewModel) {
         self.viewModel = viewModel
         super.init(collectionViewLayout: UICollectionViewFlowLayout())
     }

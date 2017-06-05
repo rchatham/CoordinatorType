@@ -52,7 +52,5 @@ class TabCoordinator: TabCoordinatorType {
 
 class TabBarControllerDelegate: NSObject, UITabBarControllerDelegate {
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
-        
-        
     }
 }

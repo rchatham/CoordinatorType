@@ -7,8 +7,9 @@
 //
 
 import Foundation
+import Architecture
 
 class BlueViewModel: ViewModel {
-    var state: State<Int> = .loading
+    var state: State<Void>? = nil
     weak var delegate: NetworkingRouter?
 }

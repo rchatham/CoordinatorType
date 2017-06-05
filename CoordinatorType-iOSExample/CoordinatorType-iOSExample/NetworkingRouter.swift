@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Architecture
 
 class NetworkingRouter: NetworkRouter {
     static let shared: NetworkRouter = NetworkingRouter()

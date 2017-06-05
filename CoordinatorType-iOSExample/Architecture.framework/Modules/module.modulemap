@@ -1,0 +1,10 @@
+framework module Architecture {
+  umbrella header "Architecture.h"
+
+  export *
+  module * { export * }
+}
+
+module Architecture.Swift {
+    header "Architecture-Swift.h"
+}

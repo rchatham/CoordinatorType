@@ -7,12 +7,13 @@
 //
 
 import UIKit
+import Architecture
 
 class BlueViewController: UIViewController, ViewModelable {
     
     let viewModel: BlueViewModel
     
-    init(viewModel: BlueViewModel) {
+    required init(viewModel: BlueViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }

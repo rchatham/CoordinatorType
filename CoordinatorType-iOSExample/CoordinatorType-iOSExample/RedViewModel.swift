@@ -7,8 +7,9 @@
 //
 
 import Foundation
+import Architecture
 
 class RedViewModel: ViewModel {
-    var state: State<String> = .loading
+    var state: State<Int>? = .loading(nil)
     weak var delegate: NetworkingRouter?
 }

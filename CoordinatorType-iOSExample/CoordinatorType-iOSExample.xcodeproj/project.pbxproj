@@ -9,14 +9,13 @@
 /* Begin PBXBuildFile section */
 		300387BC1EDFE25F00176E7B /* YellowCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300387BA1EDFE25F00176E7B /* YellowCollectionViewController.swift */; };
 		300387BD1EDFE25F00176E7B /* YellowCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 300387BB1EDFE25F00176E7B /* YellowCollectionViewController.xib */; };
-		300387C21EE0518800176E7B /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300387C11EE0518800176E7B /* ViewModel.swift */; };
 		300387C41EE051AE00176E7B /* RedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300387C31EE051AE00176E7B /* RedViewModel.swift */; };
 		300387C61EE051CB00176E7B /* BlueViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300387C51EE051CB00176E7B /* BlueViewModel.swift */; };
 		300387C91EE051ED00176E7B /* YellowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300387C81EE051ED00176E7B /* YellowViewModel.swift */; };
-		300387CC1EE053E900176E7B /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300387CB1EE053E900176E7B /* State.swift */; };
-		300387CE1EE0566F00176E7B /* ViewModelable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300387CD1EE0566F00176E7B /* ViewModelable.swift */; };
-		300387D21EE058D100176E7B /* NetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300387D11EE058D100176E7B /* NetworkRouter.swift */; };
 		300387D41EE059AC00176E7B /* NetworkingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300387D31EE059AC00176E7B /* NetworkingRouter.swift */; };
+		300388131EE55FE400176E7B /* BlueNetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300388121EE55FE400176E7B /* BlueNetworkRouter.swift */; };
+		300388171EE5615C00176E7B /* RedNetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300388161EE5615C00176E7B /* RedNetworkRouter.swift */; };
+		300388191EE5617200176E7B /* YellowNetowrkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300388181EE5617200176E7B /* YellowNetowrkRouter.swift */; };
 		30C1968E1EDFDB60005678C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C1968D1EDFDB60005678C8 /* AppDelegate.swift */; };
 		30C196901EDFDB60005678C8 /* BlueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C1968F1EDFDB60005678C8 /* BlueViewController.swift */; };
 		30C196951EDFDB60005678C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30C196941EDFDB60005678C8 /* Assets.xcassets */; };
@@ -28,6 +27,8 @@
 		30C196D01EDFDEF7005678C8 /* TabCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C196CF1EDFDEF7005678C8 /* TabCoordinator.swift */; };
 		30C196D31EDFDF9F005678C8 /* RedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C196D11EDFDF9F005678C8 /* RedTableViewController.swift */; };
 		30C196D41EDFDF9F005678C8 /* RedTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30C196D21EDFDF9F005678C8 /* RedTableViewController.xib */; };
+		30E675D41EE565BA0077ADA2 /* Architecture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 300388141EE5604A00176E7B /* Architecture.framework */; };
+		30E675D51EE565BA0077ADA2 /* Architecture.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 300388141EE5604A00176E7B /* Architecture.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,12 +49,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		30C196CC1EDFDBCC005678C8 /* Embed Frameworks */ = {
+		3003880F1EE55F1000176E7B /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				30E675D51EE565BA0077ADA2 /* Architecture.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -63,14 +65,14 @@
 /* Begin PBXFileReference section */
 		300387BA1EDFE25F00176E7B /* YellowCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YellowCollectionViewController.swift; sourceTree = "<group>"; };
 		300387BB1EDFE25F00176E7B /* YellowCollectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YellowCollectionViewController.xib; sourceTree = "<group>"; };
-		300387C11EE0518800176E7B /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		300387C31EE051AE00176E7B /* RedViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedViewModel.swift; sourceTree = "<group>"; };
 		300387C51EE051CB00176E7B /* BlueViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlueViewModel.swift; sourceTree = "<group>"; };
 		300387C81EE051ED00176E7B /* YellowViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YellowViewModel.swift; sourceTree = "<group>"; };
-		300387CB1EE053E900176E7B /* State.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
-		300387CD1EE0566F00176E7B /* ViewModelable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModelable.swift; sourceTree = "<group>"; };
-		300387D11EE058D100176E7B /* NetworkRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkRouter.swift; sourceTree = "<group>"; };
 		300387D31EE059AC00176E7B /* NetworkingRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingRouter.swift; sourceTree = "<group>"; };
+		300388121EE55FE400176E7B /* BlueNetworkRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlueNetworkRouter.swift; sourceTree = "<group>"; };
+		300388141EE5604A00176E7B /* Architecture.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Architecture.framework; sourceTree = "<group>"; };
+		300388161EE5615C00176E7B /* RedNetworkRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedNetworkRouter.swift; sourceTree = "<group>"; };
+		300388181EE5617200176E7B /* YellowNetowrkRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YellowNetowrkRouter.swift; sourceTree = "<group>"; };
 		30C1968A1EDFDB60005678C8 /* CoordinatorType-iOSExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CoordinatorType-iOSExample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		30C1968D1EDFDB60005678C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30C1968F1EDFDB60005678C8 /* BlueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueViewController.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30E675D41EE565BA0077ADA2 /* Architecture.framework in Frameworks */,
 				30C196CE1EDFDBFD005678C8 /* CoordinatorType.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -147,28 +150,13 @@
 			name = ViewModels;
 			sourceTree = "<group>";
 		};
-		300387CA1EE053DB00176E7B /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				300387CB1EE053E900176E7B /* State.swift */,
-			);
-			name = Models;
-			sourceTree = "<group>";
-		};
-		300387CF1EE0586100176E7B /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				300387D11EE058D100176E7B /* NetworkRouter.swift */,
-				300387C11EE0518800176E7B /* ViewModel.swift */,
-				300387CD1EE0566F00176E7B /* ViewModelable.swift */,
-			);
-			name = Protocols;
-			sourceTree = "<group>";
-		};
 		300387D01EE058BB00176E7B /* Networking */ = {
 			isa = PBXGroup;
 			children = (
 				300387D31EE059AC00176E7B /* NetworkingRouter.swift */,
+				300388121EE55FE400176E7B /* BlueNetworkRouter.swift */,
+				300388161EE5615C00176E7B /* RedNetworkRouter.swift */,
+				300388181EE5617200176E7B /* YellowNetowrkRouter.swift */,
 			);
 			name = Networking;
 			sourceTree = "<group>";
@@ -176,6 +164,7 @@
 		30C196811EDFDB60005678C8 = {
 			isa = PBXGroup;
 			children = (
+				300388141EE5604A00176E7B /* Architecture.framework */,
 				30C196CD1EDFDBFD005678C8 /* CoordinatorType.framework */,
 				30C1968C1EDFDB60005678C8 /* CoordinatorType-iOSExample */,
 				30C196A11EDFDB60005678C8 /* CoordinatorType-iOSExampleTests */,
@@ -199,8 +188,6 @@
 			children = (
 				30C1968D1EDFDB60005678C8 /* AppDelegate.swift */,
 				300387D01EE058BB00176E7B /* Networking */,
-				300387CF1EE0586100176E7B /* Protocols */,
-				300387CA1EE053DB00176E7B /* Models */,
 				300387C01EE0517200176E7B /* ViewModels */,
 				300387BE1EDFE43000176E7B /* Coordinators */,
 				300387BF1EDFE43C00176E7B /* ViewControllers */,
@@ -239,7 +226,7 @@
 				30C196861EDFDB60005678C8 /* Sources */,
 				30C196871EDFDB60005678C8 /* Frameworks */,
 				30C196881EDFDB60005678C8 /* Resources */,
-				30C196CC1EDFDBCC005678C8 /* Embed Frameworks */,
+				3003880F1EE55F1000176E7B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -368,17 +355,16 @@
 				30C196D31EDFDF9F005678C8 /* RedTableViewController.swift in Sources */,
 				30C196901EDFDB60005678C8 /* BlueViewController.swift in Sources */,
 				300387BC1EDFE25F00176E7B /* YellowCollectionViewController.swift in Sources */,
-				300387CC1EE053E900176E7B /* State.swift in Sources */,
 				300387C61EE051CB00176E7B /* BlueViewModel.swift in Sources */,
 				300387C91EE051ED00176E7B /* YellowViewModel.swift in Sources */,
-				300387CE1EE0566F00176E7B /* ViewModelable.swift in Sources */,
 				30C196C81EDFDB99005678C8 /* NavigationCoordinator.swift in Sources */,
-				300387D21EE058D100176E7B /* NetworkRouter.swift in Sources */,
 				300387C41EE051AE00176E7B /* RedViewModel.swift in Sources */,
+				300388191EE5617200176E7B /* YellowNetowrkRouter.swift in Sources */,
 				300387D41EE059AC00176E7B /* NetworkingRouter.swift in Sources */,
 				30C196D01EDFDEF7005678C8 /* TabCoordinator.swift in Sources */,
+				300388131EE55FE400176E7B /* BlueNetworkRouter.swift in Sources */,
 				30C1968E1EDFDB60005678C8 /* AppDelegate.swift in Sources */,
-				300387C21EE0518800176E7B /* ViewModel.swift in Sources */,
+				300388171EE5615C00176E7B /* RedNetworkRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

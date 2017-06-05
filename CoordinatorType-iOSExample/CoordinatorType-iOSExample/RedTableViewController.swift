@@ -7,12 +7,13 @@
 //
 
 import UIKit
+import Architecture
 
 class RedTableViewController: UITableViewController, ViewModelable {
     
     let viewModel: RedViewModel
     
-    init(viewModel: RedViewModel) {
+    required init(viewModel: RedViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
