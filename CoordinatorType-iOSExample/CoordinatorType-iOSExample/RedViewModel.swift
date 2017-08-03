@@ -9,7 +9,10 @@
 import Foundation
 import Architecture
 
+enum RedError: Error {
+}
+
 class RedViewModel: ViewModel {
-    var state: State<Int>? = .loading(nil)
+    var state: State<Int, RedError>? = .loading(nil)
     weak var delegate: NetworkingRouter?
 }

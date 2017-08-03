@@ -9,7 +9,10 @@
 import Foundation
 import Architecture
 
+enum YellowError: Error {
+}
+
 class YellowViewModel: ViewModel {
-    var state: State<String>? = State.loaded("🍕")
+    var state: State<String, YellowError>? = State.loaded("🍕")
     weak var delegate: NetworkingRouter?
 }

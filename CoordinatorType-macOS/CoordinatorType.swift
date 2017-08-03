@@ -8,7 +8,6 @@
 
 import Cocoa
 
-
 public protocol CoordinatorType: CoordinatorTypeDelegate {
     weak var delegate: CoordinatorTypeDelegate? { get }
     var childCoordinators: [CoordinatorType] { get set }

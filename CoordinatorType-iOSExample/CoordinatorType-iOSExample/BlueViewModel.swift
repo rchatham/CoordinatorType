@@ -9,7 +9,10 @@
 import Foundation
 import Architecture
 
+enum BlueError: Error {
+}
+
 class BlueViewModel: ViewModel {
-    var state: State<Void>? = nil
+    var state: State<Void, BlueError>? = nil
     weak var delegate: NetworkingRouter?
 }

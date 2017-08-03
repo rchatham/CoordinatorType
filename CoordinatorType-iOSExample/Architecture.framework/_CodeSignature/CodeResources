@@ -14,7 +14,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		YUwvjm78uENqKBpw4uUS3dBmCUA=
+		l5wteV8kTo9Vz6F1oBzB3oso7gM=
 		</data>
 		<key>Modules/Architecture.swiftmodule/x86_64.swiftdoc</key>
 		<data>
@@ -22,7 +22,7 @@
 		</data>
 		<key>Modules/Architecture.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		HtBaVPEcFOdpiaA9Bt/7CbmWeHc=
+		wGMgZa2hejtCPzncZsmQoghLFwU=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -68,11 +68,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			HtBaVPEcFOdpiaA9Bt/7CbmWeHc=
+			wGMgZa2hejtCPzncZsmQoghLFwU=
 			</data>
 			<key>hash2</key>
 			<data>
-			NEZNUwJ3infvhhCsnpcfVgVfm0gffux5tjUV9MO4uG0=
+			qfDJzJHnu553Yn27XPR5mgQYHpbGIjYRSu20KUJAFD8=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

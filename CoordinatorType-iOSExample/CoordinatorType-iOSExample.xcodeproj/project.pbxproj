@@ -16,6 +16,8 @@
 		300388131EE55FE400176E7B /* BlueNetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300388121EE55FE400176E7B /* BlueNetworkRouter.swift */; };
 		300388171EE5615C00176E7B /* RedNetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300388161EE5615C00176E7B /* RedNetworkRouter.swift */; };
 		300388191EE5617200176E7B /* YellowNetowrkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300388181EE5617200176E7B /* YellowNetowrkRouter.swift */; };
+		3011CB071EE79BA1008B888B /* Architecture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3011CB051EE79B8B008B888B /* Architecture.framework */; };
+		3011CB081EE79BA1008B888B /* Architecture.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3011CB051EE79B8B008B888B /* Architecture.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		30C1968E1EDFDB60005678C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C1968D1EDFDB60005678C8 /* AppDelegate.swift */; };
 		30C196901EDFDB60005678C8 /* BlueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C1968F1EDFDB60005678C8 /* BlueViewController.swift */; };
 		30C196951EDFDB60005678C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30C196941EDFDB60005678C8 /* Assets.xcassets */; };
@@ -27,8 +29,6 @@
 		30C196D01EDFDEF7005678C8 /* TabCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C196CF1EDFDEF7005678C8 /* TabCoordinator.swift */; };
 		30C196D31EDFDF9F005678C8 /* RedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C196D11EDFDF9F005678C8 /* RedTableViewController.swift */; };
 		30C196D41EDFDF9F005678C8 /* RedTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30C196D21EDFDF9F005678C8 /* RedTableViewController.xib */; };
-		30E675D41EE565BA0077ADA2 /* Architecture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 300388141EE5604A00176E7B /* Architecture.framework */; };
-		30E675D51EE565BA0077ADA2 /* Architecture.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 300388141EE5604A00176E7B /* Architecture.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,7 +55,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				30E675D51EE565BA0077ADA2 /* Architecture.framework in Embed Frameworks */,
+				3011CB081EE79BA1008B888B /* Architecture.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -70,9 +70,9 @@
 		300387C81EE051ED00176E7B /* YellowViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YellowViewModel.swift; sourceTree = "<group>"; };
 		300387D31EE059AC00176E7B /* NetworkingRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingRouter.swift; sourceTree = "<group>"; };
 		300388121EE55FE400176E7B /* BlueNetworkRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlueNetworkRouter.swift; sourceTree = "<group>"; };
-		300388141EE5604A00176E7B /* Architecture.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Architecture.framework; sourceTree = "<group>"; };
 		300388161EE5615C00176E7B /* RedNetworkRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedNetworkRouter.swift; sourceTree = "<group>"; };
 		300388181EE5617200176E7B /* YellowNetowrkRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YellowNetowrkRouter.swift; sourceTree = "<group>"; };
+		3011CB051EE79B8B008B888B /* Architecture.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Architecture.framework; sourceTree = "<group>"; };
 		30C1968A1EDFDB60005678C8 /* CoordinatorType-iOSExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CoordinatorType-iOSExample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		30C1968D1EDFDB60005678C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30C1968F1EDFDB60005678C8 /* BlueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueViewController.swift; sourceTree = "<group>"; };
@@ -97,8 +97,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				30E675D41EE565BA0077ADA2 /* Architecture.framework in Frameworks */,
 				30C196CE1EDFDBFD005678C8 /* CoordinatorType.framework in Frameworks */,
+				3011CB071EE79BA1008B888B /* Architecture.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,7 +164,7 @@
 		30C196811EDFDB60005678C8 = {
 			isa = PBXGroup;
 			children = (
-				300388141EE5604A00176E7B /* Architecture.framework */,
+				3011CB051EE79B8B008B888B /* Architecture.framework */,
 				30C196CD1EDFDBFD005678C8 /* CoordinatorType.framework */,
 				30C1968C1EDFDB60005678C8 /* CoordinatorType-iOSExample */,
 				30C196A11EDFDB60005678C8 /* CoordinatorType-iOSExampleTests */,
@@ -285,6 +285,7 @@
 				TargetAttributes = {
 					30C196891EDFDB60005678C8 = {
 						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = NT7FFBVKUP;
 						ProvisioningStyle = Automatic;
 					};
 					30C1969D1EDFDB60005678C8 = {
@@ -510,6 +511,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = NT7FFBVKUP;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -526,6 +528,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = NT7FFBVKUP;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
