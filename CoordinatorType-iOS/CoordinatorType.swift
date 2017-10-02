@@ -18,7 +18,7 @@ public protocol CoordinatorType: CoordinatorTypeDelegate {
 }
 
 extension CoordinatorType {
-    init(parent: CoordinatorType) {
+    public init(parent: CoordinatorType) {
         self.init()
         self.delegate = parent
         parent.childCoordinators.append(self)
