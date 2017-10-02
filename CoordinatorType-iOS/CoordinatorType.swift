@@ -9,10 +9,20 @@
 import UIKit
 
 public protocol CoordinatorType: CoordinatorTypeDelegate {
-    weak var delegate: CoordinatorTypeDelegate? { get }
+    init(parent: CoordinatorType)
+    init()
+    weak var delegate: CoordinatorTypeDelegate? { get set }
     var childCoordinators: [CoordinatorType] { get set }
     func viewController() -> UIViewController
     func start(onViewController viewController: UIViewController, animated: Bool)
+}
+
+extension CoordinatorType {
+    init(parent: CoordinatorType) {
+        self.init()
+        self.delegate = parent
+        parent.childCoordinators.append(self)
+    }
 }
 
 extension CoordinatorType {
