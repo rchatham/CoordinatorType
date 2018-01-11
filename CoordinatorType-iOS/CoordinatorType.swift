@@ -9,19 +9,23 @@
 import UIKit
 
 public protocol CoordinatorType: CoordinatorTypeDelegate {
-    init(parent: CoordinatorType)
-    init()
-    weak var delegate: CoordinatorTypeDelegate? { get set }
-    var childCoordinators: [CoordinatorType] { get set }
+    associatedtype Dependencies
+    var dependencies: Dependencies? { get set }
+    init(parent: CoordinatorTypeDelegate, deps: Dependencies)
     func viewController() -> UIViewController
     func start(onViewController viewController: UIViewController, animated: Bool)
 }
 
 extension CoordinatorType {
-    public init(parent: CoordinatorType) {
-        self.init()
-        self.delegate = parent
-        parent.childCoordinators.append(self)
+    public init(parent: CoordinatorTypeDelegate, deps dependencies: Dependencies) {
+        self.init(parent: parent)
+        self.dependencies = dependencies
+    }
+}
+
+extension CoordinatorType {
+    static func generator() -> (Dependencies, CoordinatorTypeDelegate) -> CoordinatorTypeDelegate {
+        return { Self(parent: $1, deps: $0) }
     }
 }
 
@@ -32,11 +36,23 @@ extension CoordinatorType {
 }
 
 public protocol CoordinatorTypeDelegate: class {
-    func coordinatorDidFinish(_ coordinator: CoordinatorType)
+    weak var delegate: CoordinatorTypeDelegate? { get set }
+    var childCoordinators: [CoordinatorTypeDelegate] { get set }
+    init(parent: CoordinatorTypeDelegate)
+    init()
+    func coordinatorDidFinish(_ coordinator: CoordinatorTypeDelegate)
+}
+
+extension CoordinatorTypeDelegate {
+    init(parent: CoordinatorTypeDelegate) {
+        self.init()
+        self.delegate = parent
+        parent.childCoordinators.append(self)
+    }
 }
 
 extension CoordinatorTypeDelegate where Self: CoordinatorType {
-    public func coordinatorDidFinish(_ coordinator: CoordinatorType) {
+    public func coordinatorDidFinish(_ coordinator: CoordinatorTypeDelegate) {
         guard let idx = childCoordinators.index(where: { $0 === coordinator }) else { return }
         childCoordinators.remove(at: idx)
     }

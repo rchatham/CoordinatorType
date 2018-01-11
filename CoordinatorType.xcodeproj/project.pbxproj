@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		300249A6200823F9002323EC /* CoordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307B526A1E63B8C900D3FDD0 /* CoordinatorType.swift */; };
+		300249A7200823FC002323EC /* AppCoordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B39A2A1E8C67C8001DF187 /* AppCoordinatorType.swift */; };
+		300249A8200823FE002323EC /* NavigationCoordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307B52701E63BB5300D3FDD0 /* NavigationCoordinatorType.swift */; };
+		300249A920082401002323EC /* TabCoordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307B52721E63BB9300D3FDD0 /* TabCoordinatorType.swift */; };
+		300249AA20082404002323EC /* URLCoordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307963481EB9B521004CF803 /* URLCoordinatorType.swift */; };
+		300249AC200824AC002323EC /* MockCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300249AB200824AC002323EC /* MockCoordinator.swift */; };
 		307963491EB9B521004CF803 /* URLCoordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307963481EB9B521004CF803 /* URLCoordinatorType.swift */; };
 		307B526B1E63B8C900D3FDD0 /* CoordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307B526A1E63B8C900D3FDD0 /* CoordinatorType.swift */; };
 		307B526D1E63B8DD00D3FDD0 /* CoordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307B526C1E63B8DD00D3FDD0 /* CoordinatorType.swift */; };
@@ -41,6 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		300249AB200824AC002323EC /* MockCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCoordinator.swift; sourceTree = "<group>"; };
 		307963481EB9B521004CF803 /* URLCoordinatorType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLCoordinatorType.swift; sourceTree = "<group>"; };
 		307B526A1E63B8C900D3FDD0 /* CoordinatorType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoordinatorType.swift; sourceTree = "<group>"; };
 		307B526C1E63B8DD00D3FDD0 /* CoordinatorType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoordinatorType.swift; sourceTree = "<group>"; };
@@ -138,6 +145,7 @@
 			children = (
 				30EE480C1E6278A5006992A2 /* CoordinatorType_iOSTests.swift */,
 				30C1967F1EDFD7DA005678C8 /* MockNavigationCoordinator.swift */,
+				300249AB200824AC002323EC /* MockCoordinator.swift */,
 				30EE480E1E6278A5006992A2 /* Info.plist */,
 			);
 			path = "CoordinatorType-iOSTests";
@@ -356,7 +364,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				30C196801EDFD7DA005678C8 /* MockNavigationCoordinator.swift in Sources */,
+				300249A8200823FE002323EC /* NavigationCoordinatorType.swift in Sources */,
 				30EE480D1E6278A5006992A2 /* CoordinatorType_iOSTests.swift in Sources */,
+				300249AA20082404002323EC /* URLCoordinatorType.swift in Sources */,
+				300249A7200823FC002323EC /* AppCoordinatorType.swift in Sources */,
+				300249A920082401002323EC /* TabCoordinatorType.swift in Sources */,
+				300249AC200824AC002323EC /* MockCoordinator.swift in Sources */,
+				300249A6200823F9002323EC /* CoordinatorType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -4,10 +4,8 @@
 //
 //  Created by Reid Chatham on 2/25/17.
 //
-//
 
 import XCTest
-@testable import CoordinatorType
 
 class CoordinatorType_iOSTests: XCTestCase {
     
