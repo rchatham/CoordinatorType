@@ -12,8 +12,6 @@ public protocol CoordinatorType: CoordinatorTypeDelegate {
     associatedtype Dependencies
     var dependencies: Dependencies? { get set }
     init(parent: CoordinatorTypeDelegate, deps: Dependencies)
-    func viewController() -> UIViewController
-    func start(onViewController viewController: UIViewController, animated: Bool)
 }
 
 extension CoordinatorType {
@@ -29,17 +27,13 @@ extension CoordinatorType {
     }
 }
 
-extension CoordinatorType {
-    public func start(onViewController viewController: UIViewController, animated: Bool) {
-        viewController.present(self.viewController(), animated: animated, completion: nil)
-    }
-}
-
 public protocol CoordinatorTypeDelegate: class {
     weak var delegate: CoordinatorTypeDelegate? { get set }
     var childCoordinators: [CoordinatorTypeDelegate] { get set }
     init(parent: CoordinatorTypeDelegate)
     init()
+    func viewController() -> UIViewController
+    func start(onViewController viewController: UIViewController, animated: Bool)
     func coordinatorDidFinish(_ coordinator: CoordinatorTypeDelegate)
 }
 
@@ -48,6 +42,12 @@ extension CoordinatorTypeDelegate {
         self.init()
         self.delegate = parent
         parent.childCoordinators.append(self)
+    }
+}
+
+extension CoordinatorTypeDelegate {
+    public func start(onViewController viewController: UIViewController, animated: Bool) {
+        viewController.present(self.viewController(), animated: animated, completion: nil)
     }
 }
 
