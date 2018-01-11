@@ -24,7 +24,7 @@ extension CoordinatorType {
 }
 
 extension CoordinatorType {
-    static func generator() -> (Dependencies, CoordinatorTypeDelegate) -> CoordinatorTypeDelegate {
+    public static func generator() -> (Dependencies, CoordinatorTypeDelegate) -> CoordinatorTypeDelegate {
         return { Self(parent: $1, deps: $0) }
     }
 }
@@ -44,7 +44,7 @@ public protocol CoordinatorTypeDelegate: class {
 }
 
 extension CoordinatorTypeDelegate {
-    init(parent: CoordinatorTypeDelegate) {
+    public init(parent: CoordinatorTypeDelegate) {
         self.init()
         self.delegate = parent
         parent.childCoordinators.append(self)
