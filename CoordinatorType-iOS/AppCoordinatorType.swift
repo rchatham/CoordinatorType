@@ -25,8 +25,18 @@ extension AppCoordinatorType where Self: UIApplicationDelegate {
             Static.childCoordinators = newValue
         }
     }
+
+    public var dependencies: Dependencies? {
+        get {
+            return Static.dependencies as? Dependencies
+        }
+        set {
+            Static.dependencies = newValue
+        }
+    }
 }
 
 private struct Static {
     static var childCoordinators: [CoordinatorTypeDelegate] = []
+    static var dependencies: Any?
 }
