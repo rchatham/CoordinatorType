@@ -4,48 +4,47 @@
 //
 //  Created by Reid Chatham on 2/26/17.
 //
-//
 
 import UIKit
 
-public protocol CoordinatorType: CoordinatorTypeDelegate {
+public protocol CoordinatorType: CoordinatorTypeDelegate, CoordinatorTypeDataSource {
     associatedtype Dependencies
     var dependencies: Dependencies? { get set }
-    init(parent: CoordinatorTypeDelegate, deps: Dependencies)
+    weak var delegate: CoordinatorTypeDelegate? { get set }
+    var childCoordinators: [CoordinatorTypeDelegate] { get set }
+    init<Coordinator: CoordinatorType>(parent: Coordinator, deps: Dependencies)
+    init<Coordinator: CoordinatorType>(parent: Coordinator)
+    init()
+    static func generator<Parent: CoordinatorType, Child: CoordinatorType>() -> (Child.Dependencies, Parent) -> Child
 }
 
 extension CoordinatorType {
-    public init(parent: CoordinatorTypeDelegate, deps dependencies: Dependencies) {
+    public init<Coordinator: CoordinatorType>(parent: Coordinator, deps dependencies: Dependencies) {
         self.init(parent: parent)
         self.dependencies = dependencies
     }
-}
 
-extension CoordinatorType {
-    public static func generator() -> (Dependencies, CoordinatorTypeDelegate) -> CoordinatorTypeDelegate {
-        return { Self(parent: $1, deps: $0) }
-    }
-}
-
-public protocol CoordinatorTypeDelegate: class {
-    weak var delegate: CoordinatorTypeDelegate? { get set }
-    var childCoordinators: [CoordinatorTypeDelegate] { get set }
-    init(parent: CoordinatorTypeDelegate)
-    init()
-    func viewController() -> UIViewController
-    func start(onViewController viewController: UIViewController, animated: Bool)
-    func coordinatorDidFinish(_ coordinator: CoordinatorTypeDelegate)
-}
-
-extension CoordinatorTypeDelegate {
-    public init(parent: CoordinatorTypeDelegate) {
+    public init<Coordinator: CoordinatorType>(parent: Coordinator) {
         self.init()
         self.delegate = parent
         parent.childCoordinators.append(self)
     }
+
+    public static func generator<Parent: CoordinatorType, Child: CoordinatorType>() -> (Child.Dependencies, Parent) -> Child {
+        return { Child(parent: $1, deps: $0) }
+    }
 }
 
-extension CoordinatorTypeDelegate {
+public protocol CoordinatorTypeDataSource: class {
+    func viewController() -> UIViewController
+}
+
+public protocol CoordinatorTypeDelegate: class {
+    func start(onViewController viewController: UIViewController, animated: Bool)
+    func coordinatorDidFinish(_ coordinator: CoordinatorTypeDelegate)
+}
+
+extension CoordinatorTypeDelegate where Self: CoordinatorTypeDataSource {
     public func start(onViewController viewController: UIViewController, animated: Bool) {
         viewController.present(self.viewController(), animated: animated, completion: nil)
     }

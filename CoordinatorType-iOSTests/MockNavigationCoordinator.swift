@@ -8,9 +8,7 @@
 import UIKit
 
 class MockNavigationCoordinator: NavigationCoordinatorType {
-    struct Dependencies {
-
-    }
+    struct Dependencies {}
 
     var delegate: CoordinatorTypeDelegate?
     var childCoordinators: [CoordinatorTypeDelegate] = []
