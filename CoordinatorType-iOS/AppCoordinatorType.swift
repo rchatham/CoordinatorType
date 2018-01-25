@@ -10,7 +10,12 @@ import UIKit
 
 public protocol AppCoordinatorType: CoordinatorType {}
 
+/// Wrapper class for providing app dependencies. Subclass this class to define global dependencies for your app.
+open class AppDependencies {}
+
 extension AppCoordinatorType where Self: UIApplicationDelegate {
+
+    public typealias Dependencies = AppDependencies
     
     weak public var delegate: CoordinatorTypeDelegate? {
         get { return nil }
@@ -28,7 +33,7 @@ extension AppCoordinatorType where Self: UIApplicationDelegate {
 
     public var dependencies: Dependencies? {
         get {
-            return Static.dependencies as? Dependencies
+            return Static.dependencies
         }
         set {
             Static.dependencies = newValue
@@ -38,5 +43,5 @@ extension AppCoordinatorType where Self: UIApplicationDelegate {
 
 private struct Static {
     static var childCoordinators: [CoordinatorTypeDelegate] = []
-    static var dependencies: Any?
+    static var dependencies: AppDependencies?
 }
