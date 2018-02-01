@@ -19,6 +19,9 @@ extension NavigationCoordinatorType {
     }
     
     public func viewController() -> UIViewController {
+        if let nav = navigationController {
+            return nav
+        }
         let nav = UINavigationController()
         start(onNavigationController: nav, animated: false)
         return nav
@@ -28,9 +31,7 @@ extension NavigationCoordinatorType {
         if let nav = viewController as? UINavigationController {
             start(onNavigationController: nav, animated: animated)
         } else {
-            let nav = UINavigationController()
-            start(onNavigationController: nav, animated: false)
-            viewController.present(nav, animated: animated, completion: nil)
+            viewController.present(self.viewController(), animated: animated, completion: nil)
         }
     }
     

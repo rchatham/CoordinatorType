@@ -30,8 +30,8 @@ extension CoordinatorType {
         parent.childCoordinators.append(self)
     }
 
-    public static func generator<Parent: CoordinatorType, Child: CoordinatorType>() -> (Child.Dependencies, Parent) -> Child {
-        return { Child(parent: $1, deps: $0) }
+    public static func generator<Parent: CoordinatorType>() -> (Dependencies, Parent) -> Self {
+        return { Self(parent: $1, deps: $0) }
     }
 }
 

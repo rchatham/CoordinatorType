@@ -19,6 +19,9 @@ extension TabCoordinatorType {
     }
     
     public func viewController() -> UIViewController {
+        if let tab = tabController {
+            return tab
+        }
         let tab = UITabBarController()
         start(onTabController: tab, animated: false)
         return tab
@@ -28,9 +31,7 @@ extension TabCoordinatorType {
         if let tab = viewController as? UITabBarController {
             start(onTabController: tab, animated: animated)
         } else {
-            let tab = UITabBarController()
-            start(onTabController: tab, animated: false)
-            viewController.present(tab, animated: true, completion: nil)
+            viewController.present(self.viewController(), animated: true, completion: nil)
         }
     }
     
