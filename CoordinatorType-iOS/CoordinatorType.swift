@@ -15,7 +15,7 @@ public protocol CoordinatorType: CoordinatorTypeDelegate, CoordinatorTypeDataSou
     init<Coordinator: CoordinatorType>(parent: Coordinator, deps: Dependencies)
     init<Coordinator: CoordinatorType>(parent: Coordinator)
     init()
-    static func generator<Parent: CoordinatorType, Child: CoordinatorType>() -> (Child.Dependencies, Parent) -> Child
+    static func generator<Parent: CoordinatorType>() -> (Dependencies, Parent) -> Self
 }
 
 extension CoordinatorType {
