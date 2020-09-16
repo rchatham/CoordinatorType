@@ -15,7 +15,6 @@ public protocol TabCoordinatorType: CoordinatorType {
 }
 
 extension TabCoordinatorType {
-    
     public func tabController() -> NSTabViewController {
         return viewController() as! NSTabViewController
     }

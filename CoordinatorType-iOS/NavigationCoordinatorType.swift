@@ -9,8 +9,8 @@
 import UIKit
 
 public protocol NavigationCoordinatorType: CoordinatorType {
-    weak var navigationController: UINavigationController? { get set }
-    func rootViewController() -> UIViewController
+    var navigationController: UINavigationController? { get set }
+    func rootCoordinator() -> CoordinatorType
 }
 
 extension NavigationCoordinatorType {
@@ -36,8 +36,9 @@ extension NavigationCoordinatorType {
     }
     
     private func start(onNavigationController navigationController: UINavigationController, animated: Bool) {
-        let root = rootViewController()
-        navigationController.pushViewController(root, animated: animated)
+        let rootCoord = rootCoordinator()
+        childCoordinators.append(rootCoord)
+        navigationController.pushViewController(rootCoord.viewController(), animated: animated)
         self.navigationController = navigationController
     }
 }

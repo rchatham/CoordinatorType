@@ -12,7 +12,7 @@ public protocol AppCoordinatorType: CoordinatorType {}
 
 extension AppCoordinatorType where Self: UIApplicationDelegate {
     
-    weak public var delegate: CoordinatorTypeDelegate? {
+    public var parent: CoordinatorTypeDelegate? {
         get { return nil }
         set {}
     }
