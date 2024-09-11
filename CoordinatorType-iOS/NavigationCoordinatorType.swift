@@ -9,7 +9,7 @@
 import UIKit
 
 public protocol NavigationCoordinatorType: CoordinatorType {
-    weak var navigationController: UINavigationController? { get set }
+    var navigationController: UINavigationController? { get set }
     func rootViewController() -> UIViewController
 }
 
