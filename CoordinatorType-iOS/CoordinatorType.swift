@@ -10,7 +10,7 @@ import UIKit
 public protocol CoordinatorType: CoordinatorTypeDelegate, CoordinatorTypeDataSource {
     associatedtype Dependencies
     var dependencies: Dependencies? { get set }
-    weak var delegate: CoordinatorTypeDelegate? { get set }
+    var delegate: CoordinatorTypeDelegate? { get set }
     var childCoordinators: [CoordinatorTypeDelegate] { get set }
     init<Coordinator: CoordinatorType>(parent: Coordinator, deps: Dependencies)
     init<Coordinator: CoordinatorType>(parent: Coordinator)
@@ -35,11 +35,11 @@ extension CoordinatorType {
     }
 }
 
-public protocol CoordinatorTypeDataSource: class {
+public protocol CoordinatorTypeDataSource: AnyObject {
     func viewController() -> UIViewController
 }
 
-public protocol CoordinatorTypeDelegate: class {
+public protocol CoordinatorTypeDelegate: AnyObject {
     func start(onViewController viewController: UIViewController, animated: Bool)
     func coordinatorDidFinish(_ coordinator: CoordinatorTypeDelegate)
 }
@@ -52,7 +52,7 @@ extension CoordinatorTypeDelegate where Self: CoordinatorTypeDataSource {
 
 extension CoordinatorTypeDelegate where Self: CoordinatorType {
     public func coordinatorDidFinish(_ coordinator: CoordinatorTypeDelegate) {
-        guard let idx = childCoordinators.index(where: { $0 === coordinator }) else { return }
+        guard let idx = childCoordinators.firstIndex(where: { $0 === coordinator }) else { return }
         childCoordinators.remove(at: idx)
     }
 }

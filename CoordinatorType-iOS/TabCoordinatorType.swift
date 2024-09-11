@@ -8,12 +8,11 @@
 import UIKit
 
 public protocol TabCoordinatorType: CoordinatorType {
-    weak var tabController: UITabBarController? { get set }
+    var tabController: UITabBarController? { get set }
     func rootViewControllers() -> [UIViewController]
 }
 
 extension TabCoordinatorType {
-    
     public func tabController() -> UITabBarController {
         return viewController() as! UITabBarController
     }

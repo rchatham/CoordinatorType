@@ -23,21 +23,13 @@ extension AppCoordinatorType where Self: UIApplicationDelegate {
     }
     
     public var childCoordinators: [CoordinatorTypeDelegate] {
-        get {
-            return Static.childCoordinators
-        }
-        set {
-            Static.childCoordinators = newValue
-        }
+        get { return Static.childCoordinators }
+        set { Static.childCoordinators = newValue }
     }
 
-    public var dependencies: Dependencies? {
-        get {
-            return Static.dependencies
-        }
-        set {
-            Static.dependencies = newValue
-        }
+    public var dependencies: AppDependencies? {
+        get { return Static.dependencies }
+        set { Static.dependencies = newValue }
     }
 }
 
