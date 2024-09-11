@@ -14,7 +14,6 @@ public protocol NavigationCoordinatorType: CoordinatorType {
 }
 
 extension NavigationCoordinatorType {
-    
     public func navigationController() -> UINavigationController {
         return viewController() as! UINavigationController
     }

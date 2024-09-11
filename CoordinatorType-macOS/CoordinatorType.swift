@@ -8,8 +8,7 @@
 
 import Cocoa
 
-
-public protocol CoordinatorType: CoordinatorTypeDelegate {
+@objc public protocol CoordinatorType: CoordinatorTypeDelegate {
     weak var delegate: CoordinatorTypeDelegate? { get }
     var childCoordinators: [CoordinatorType] { get set }
     func viewController() -> NSViewController
@@ -22,7 +21,7 @@ extension CoordinatorType {
     }
 }
 
-public protocol CoordinatorTypeDelegate: class {
+@objc public protocol CoordinatorTypeDelegate: AnyObject {
     func coordinatorDidFinish(_ coordinator: CoordinatorType)
 }
 

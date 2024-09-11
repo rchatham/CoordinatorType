@@ -11,19 +11,14 @@ import UIKit
 public protocol AppCoordinatorType: CoordinatorType {}
 
 extension AppCoordinatorType where Self: UIApplicationDelegate {
-    
     weak public var delegate: CoordinatorTypeDelegate? {
         get { return nil }
         set {}
     }
     
     public var childCoordinators: [CoordinatorType] {
-        get {
-            return Static.childCoordinators
-        }
-        set {
-            Static.childCoordinators = newValue
-        }
+        get { return Static.childCoordinators }
+        set { Static.childCoordinators = newValue }
     }
 }
 

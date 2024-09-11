@@ -8,7 +8,7 @@
 
 import UIKit
 
-public protocol CoordinatorType: CoordinatorTypeDelegate {
+@objc public protocol CoordinatorType: CoordinatorTypeDelegate {
     weak var delegate: CoordinatorTypeDelegate? { get }
     var childCoordinators: [CoordinatorType] { get set }
     func viewController() -> UIViewController
@@ -21,13 +21,13 @@ extension CoordinatorType {
     }
 }
 
-public protocol CoordinatorTypeDelegate: class {
+@objc public protocol CoordinatorTypeDelegate: AnyObject {
     func coordinatorDidFinish(_ coordinator: CoordinatorType)
 }
 
 extension CoordinatorTypeDelegate where Self: CoordinatorType {
     public func coordinatorDidFinish(_ coordinator: CoordinatorType) {
-        guard let idx = childCoordinators.index(where: { $0 === coordinator }) else { return }
+        guard let idx = childCoordinators.firstIndex(where: { $0 === coordinator }) else { return }
         childCoordinators.remove(at: idx)
     }
 }

@@ -9,13 +9,12 @@
 import Cocoa
 
 
-public protocol TabCoordinatorType: CoordinatorType {
+@objc public protocol TabCoordinatorType: CoordinatorType {
     weak var tabController: NSTabViewController? { get set }
     func rootViewControllers() -> [NSViewController]
 }
 
 extension TabCoordinatorType {
-    
     public func tabController() -> NSTabViewController {
         return viewController() as! NSTabViewController
     }
