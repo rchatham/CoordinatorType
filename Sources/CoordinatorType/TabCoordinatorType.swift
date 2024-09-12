@@ -12,7 +12,7 @@ import UIKit
 import Cocoa
 #endif
 
-@objc public protocol TabCoordinatorType: CoordinatorType {
+public protocol TabCoordinatorType: CoordinatorType {
 #if os(iOS)
     var tabController: UITabBarController? { get set }
     func rootViewControllers() -> [UIViewController]

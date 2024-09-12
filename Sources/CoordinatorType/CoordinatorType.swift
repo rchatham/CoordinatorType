@@ -12,7 +12,7 @@ import UIKit
 import Cocoa
 #endif
 
-@objc public protocol CoordinatorType: CoordinatorTypeDelegate {
+public protocol CoordinatorType: CoordinatorTypeDelegate {
     weak var delegate: CoordinatorTypeDelegate? { get }
     var childCoordinators: [CoordinatorType] { get set }
     #if os(iOS)
@@ -36,7 +36,7 @@ extension CoordinatorType {
     #endif
 }
 
-@objc public protocol CoordinatorTypeDelegate: AnyObject {
+public protocol CoordinatorTypeDelegate: AnyObject {
     func coordinatorDidFinish(_ coordinator: CoordinatorType)
 }
 
