@@ -13,7 +13,7 @@ import Cocoa
 #endif
 
 public protocol CoordinatorType: CoordinatorTypeDelegate {
-    weak var delegate: CoordinatorTypeDelegate? { get }
+    var delegate: CoordinatorTypeDelegate? { get }
     var childCoordinators: [CoordinatorType] { get set }
     #if os(iOS)
     func viewController() -> UIViewController
