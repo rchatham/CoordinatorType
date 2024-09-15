@@ -17,7 +17,7 @@ public protocol TabCoordinatorType: CoordinatorType {
     var tabController: UITabBarController? { get set }
     func rootViewControllers() -> [UIViewController]
 #elseif os(macOS)
-    weak var tabController: NSTabViewController? { get set }
+    var tabController: NSTabViewController? { get set }
     func rootViewControllers() -> [NSViewController]
 #endif
 }
