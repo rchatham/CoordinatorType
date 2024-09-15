@@ -10,11 +10,6 @@ import CoordinatorType
 import UIKit
 
 class MainTabCoordinator: TabCoordinatorType {
-    struct Dependencies {}
-
-    required init() {}
-
-    var dependencies: MainTabCoordinator.Dependencies?
     weak var delegate: CoordinatorTypeDelegate?
     var childCoordinators: [CoordinatorType] = []
 
@@ -27,27 +22,27 @@ class MainTabCoordinator: TabCoordinatorType {
     func rootViewControllers() -> [UIViewController] {
         return [
             tabConfiguredViewController(
-                coordinator: ContactsCoordinator(parent: self),
+                coordinator: ContactsCoordinator(),
                 tabBarItem: UITabBarItem(
                     title: "Contacts",
-                    image: #imageLiteral(resourceName: "people-icon"),
-                    selectedImage: nil
+                    image: UIImage(systemName: "person.crop.circle"),
+                    selectedImage: UIImage(systemName: "person.crop.circle.fill")
                 )
             ),
             tabConfiguredViewController(
-                coordinator: InboxCoordinator(parent: self),
+                coordinator: InboxCoordinator(),
                 tabBarItem: UITabBarItem(
                     title: "Inbox",
-                    image: #imageLiteral(resourceName: "logo-empty"),
-                    selectedImage: nil
+                    image: UIImage(systemName: "tray"),
+                    selectedImage: UIImage(systemName: "tray.fill")
                 )
             ),
             tabConfiguredViewController(
-                coordinator: SettingsCoordinator(parent: self),
+                coordinator: SettingsCoordinator(),
                 tabBarItem: UITabBarItem(
                     title: "Settings",
-                    image: #imageLiteral(resourceName: "gear-2"),
-                    selectedImage: nil
+                    image: UIImage(systemName: "gearshape"),
+                    selectedImage: UIImage(systemName: "gearshape.fill")
                 )
             ),
         ]
@@ -61,7 +56,6 @@ class MainTabCoordinator: TabCoordinatorType {
 }
 
 class ContactsCoordinator: CoordinatorType {
-    struct Dependencies {}
     var delegate: CoordinatorTypeDelegate?
     var childCoordinators: [CoordinatorType] = []
     func viewController() -> UIViewController {
@@ -70,7 +64,6 @@ class ContactsCoordinator: CoordinatorType {
 }
 
 class InboxCoordinator: CoordinatorType {
-    struct Dependencies {}
     var delegate: CoordinatorTypeDelegate?
     var childCoordinators: [CoordinatorType] = []
     func viewController() -> UIViewController {
@@ -79,7 +72,6 @@ class InboxCoordinator: CoordinatorType {
 }
 
 class SettingsCoordinator: CoordinatorType {
-    struct Dependencies {}
     var delegate: CoordinatorTypeDelegate?
     var childCoordinators: [CoordinatorType] = []
     func viewController() -> UIViewController {
