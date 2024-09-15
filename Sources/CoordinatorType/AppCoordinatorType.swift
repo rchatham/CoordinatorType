@@ -23,6 +23,19 @@ extension AppCoordinatorType where Self: UIApplicationDelegate {
     }
 }
 
+@available(iOS 13.0, *)
+extension AppCoordinatorType where Self: UIWindowSceneDelegate {
+    weak public var delegate: CoordinatorTypeDelegate? {
+        get { return nil }
+        set {}
+    }
+
+    public var childCoordinators: [CoordinatorType] {
+        get { return Static.childCoordinators }
+        set { Static.childCoordinators = newValue }
+    }
+}
+
 private struct Static {
     static var childCoordinators: [CoordinatorType] = []
 }
