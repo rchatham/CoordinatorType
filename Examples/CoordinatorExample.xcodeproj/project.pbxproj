@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 60;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,7 @@
 		B10A56512C9397CF00D5C2EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B10A564F2C9397CF00D5C2EB /* LaunchScreen.storyboard */; };
 		B10A56592C93987E00D5C2EB /* MainTabCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10A56582C93987E00D5C2EB /* MainTabCoordinator.swift */; };
 		B10A565C2C93989800D5C2EB /* CoordinatorType in Frameworks */ = {isa = PBXBuildFile; productRef = B10A565B2C93989800D5C2EB /* CoordinatorType */; };
+		B10A565F2C939B2B00D5C2EB /* CoordinatorType in Frameworks */ = {isa = PBXBuildFile; productRef = B10A565E2C939B2B00D5C2EB /* CoordinatorType */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B10A565C2C93989800D5C2EB /* CoordinatorType in Frameworks */,
+				B10A565F2C939B2B00D5C2EB /* CoordinatorType in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,6 +92,7 @@
 			name = CoordinatorExample;
 			packageProductDependencies = (
 				B10A565B2C93989800D5C2EB /* CoordinatorType */,
+				B10A565E2C939B2B00D5C2EB /* CoordinatorType */,
 			);
 			productName = CoordinatorExample;
 			productReference = B10A56412C9397CD00D5C2EB /* CoordinatorExample.app */;
@@ -120,7 +123,7 @@
 			);
 			mainGroup = B10A56382C9397CD00D5C2EB;
 			packageReferences = (
-				B10A565A2C93989800D5C2EB /* XCLocalSwiftPackageReference ".." */,
+				B10A565D2C939B2B00D5C2EB /* XCRemoteSwiftPackageReference "CoordinatorType" */,
 			);
 			productRefGroup = B10A56422C9397CD00D5C2EB /* Products */;
 			projectDirPath = "";
@@ -376,16 +379,25 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCLocalSwiftPackageReference section */
-		B10A565A2C93989800D5C2EB /* XCLocalSwiftPackageReference ".." */ = {
-			isa = XCLocalSwiftPackageReference;
-			relativePath = ..;
+/* Begin XCRemoteSwiftPackageReference section */
+		B10A565D2C939B2B00D5C2EB /* XCRemoteSwiftPackageReference "CoordinatorType" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/rchatham/CoordinatorType";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
 		};
-/* End XCLocalSwiftPackageReference section */
+/* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
 		B10A565B2C93989800D5C2EB /* CoordinatorType */ = {
 			isa = XCSwiftPackageProductDependency;
+			productName = CoordinatorType;
+		};
+		B10A565E2C939B2B00D5C2EB /* CoordinatorType */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B10A565D2C939B2B00D5C2EB /* XCRemoteSwiftPackageReference "CoordinatorType" */;
 			productName = CoordinatorType;
 		};
 /* End XCSwiftPackageProductDependency section */

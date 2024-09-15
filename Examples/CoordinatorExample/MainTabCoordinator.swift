@@ -16,7 +16,7 @@ class MainTabCoordinator: TabCoordinatorType {
 
     var dependencies: MainTabCoordinator.Dependencies?
     weak var delegate: CoordinatorTypeDelegate?
-    var childCoordinators: [CoordinatorTypeDelegate] = []
+    var childCoordinators: [CoordinatorType] = []
 
     weak var tabController: UITabBarController? {
         didSet {
@@ -57,5 +57,32 @@ class MainTabCoordinator: TabCoordinatorType {
         let vc = coordinator.viewController()
         vc.tabBarItem = tabBarItem
         return vc
+    }
+}
+
+class ContactsCoordinator: CoordinatorType {
+    struct Dependencies {}
+    var delegate: CoordinatorTypeDelegate?
+    var childCoordinators: [CoordinatorType] = []
+    func viewController() -> UIViewController {
+        return UIViewController()
+    }
+}
+
+class InboxCoordinator: CoordinatorType {
+    struct Dependencies {}
+    var delegate: CoordinatorTypeDelegate?
+    var childCoordinators: [CoordinatorType] = []
+    func viewController() -> UIViewController {
+        return UIViewController()
+    }
+}
+
+class SettingsCoordinator: CoordinatorType {
+    struct Dependencies {}
+    var delegate: CoordinatorTypeDelegate?
+    var childCoordinators: [CoordinatorType] = []
+    func viewController() -> UIViewController {
+        return UIViewController()
     }
 }
